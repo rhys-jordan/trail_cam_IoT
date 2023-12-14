@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<h1 align="center">Logs</h1>
+<div class = "buttons">
+     <form action="/logs" method = "POST"> 
+        <input type="submit" value="Update" name = "table">
+    </form>
+</div>
+<div class = "logtable">
+    <table>
+        <tr class = "header" >
+            <th>Timestamp</th>
+            <th>Tempature (°F) </th>
+            <th>Status</th>
+        </tr>
+        {% for i in table %}
+        <tr class = "table">
+            <td>{{i.timeStamp}}</td>
+            <td>{{i.temp}}</td>
+            <td>{{i.status}}</td>
+        </tr>
+        {% endfor %}
+        <!--<a href="/update"><button>Update</button></a>-->
+    </table>
+</div>
+{% endblock %}
