@@ -16,3 +16,13 @@ Final Project for IoT. Trail camera using raspberry pi. This project also includ
 * cs380_README_CumroJordan.pdf : Reviews the libraries and the versions of software used when building this project. Details the environment setup and how to test the system if needed.
 * TrailCameraWebApp : contains the files to run the base station. These files pull and display the images from the rasberry pi.
 
+  ## current limitations
+  * uses dateTime to get the time: over time this may drift. With more time we would add a realtime clock to this system.
+  * node js was written very system dependent
+  * the database hosting the images is missing some pieces we would want to add in the longterm.(deleting images you dont want taking up space)
+
+  ## future additions
+  * more environemental sensors: humidity and the amount of light detected could help the system take more reliable pictures and turn off when the pictures may be blurry or dark
+  * real time clock
+  * machine learning algorithm to try and eliminate pictures taken without an animal or person pictured.
+
